@@ -1,6 +1,6 @@
-// if(process.env.NODE_ENV != "production"){
-//   require('dotenv').config()
-// }
+if(process.env.NODE_ENV != "production"){
+  require('dotenv').config()
+}
 // console.log(process.env.SECRET) // remove this after you've confirmed it is working
 
 
