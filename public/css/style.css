@@ -1,0 +1,167 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+/* new ejs  */
+/* input.form-control {
+    /* width: 33em; */
+/* }  */
+/* textarea.form-control {
+    width: 30em;
+    text-align: center;
+} */
+
+
+.navbar{
+    height: 5rem;
+}
+.fa-compass{
+   color: #fe424d;
+   font-size: 2rem !important;
+}
+/* Footer */
+.f-info-links a{
+    text-decoration: none;
+    display: inline;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+ 
+}
+
+
+.f-info-links{
+    width: 100%;
+}
+.f-info-socials,.f-info-brands{
+    width: 100%;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials i{
+    margin-right: 1rem;
+}
+.f-info{
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+/* Imgage height */
+img.card-img-top {
+    height: 35vh;
+}
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.listing-link{
+    text-decoration: none;
+    color: #222222;
+}
+
+/* Card */
+.card{
+    border: none !important;
+}
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text p{
+    font-weight: 400;
+}
+.listing-link{
+    text-decoration: none;
+    color: black;
+}
+.listing-link:hover{
+    font-size: 20px;
+    color: rgb(18, 203, 61);
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+}
+/* Create new Button */
+button.btn.btn-danger.Edit {
+    height: 37px;
+    width: 62px;
+    background-color: #fe424d !important;
+}
+
+.btn-Add{
+    background-color: #fe424d !important;
+    border: none !important;  
+}
+/* Edit update button */
+.edit-btn{
+background-color: #fe424d !important;
+border: none !important;
+}
+/* Show image */
+.show-img{
+    height: 40vh;
+    width: 40rem !important;
+}
+.btn{
+    display: flex !important;
+   
+}
+.offset-2 {
+    margin-left: -2.333333% !important;
+}
+input.description {
+    width: 43em;
+    height: 13em;
+}
+/* Card Review */
+.card.col-5.mb-3 {
+    border: 1px solid black !important;
+    width: 18rem;
+    border-radius: 19px !important;
+    color: #fe424d;
+    font-weight: 700;
+    box-shadow: 5px 10px #fe424d;
+}
+
+
+/* flash used */
+button.close {
+    position: relative;
+    left: 65rem;
+    border: none;
+    background-color: none !important;
+    /* color: snow; */
+    /* background-color: snow; */
+}
+/* map */
+#map { 
+  height: 450px;
+  width: 80vh;
+  margin-bottom: 10px;
+  border-radius: 5px;
+ }

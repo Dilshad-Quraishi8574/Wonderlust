@@ -1,0 +1,24 @@
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- (If only used in success in condition then create in array then automatically flash green color are generate used in condition if length) -->
+
+<% if(success && success.length>0){%>
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= success %>
+      <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+          
+          </button>
+      </div>
+      <%}%>
+<!-- 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ (If listing are not listing)
+ -->
+ 
+ <% if(error && error.length>0){%>
+    <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= error %>
+      <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+          
+          </button>
+      </div>
+      <%}%>

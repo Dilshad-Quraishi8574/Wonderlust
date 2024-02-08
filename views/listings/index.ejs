@@ -1,0 +1,141 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+  #filters {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+}
+.filter {
+    margin-right: 2rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+.filter:hover{
+  opacity: 1;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+.tax-info{
+  display: none;
+}
+.tax-toggle{
+  border:  1px solid black;
+  border-radius: 10px;
+  height: 3rem;
+  padding: 1rem;
+  margin-left: 4rem;
+  display: flex;
+  align-items: center;
+}
+label {
+    display: unset;
+}
+</style>
+
+<body>
+  <div class="container">
+  <div id ="filters">
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa fa-building"></i></div>
+      <p>Building</p>
+    </div>
+    <div class="filter">
+      <div><i class='fas fa-hamburger'></i></div>
+      <p>Fast Food</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-hotel"></i></div>
+      <p>Rooms</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa fa-building"></i></div>
+      <p>Building</p>
+    </div>
+   <div class="filter">
+      <div><i class='fas fa-hamburger'></i></div>
+      <p>Fast Food</p>
+    </div>
+    <div class="filter">
+      <div>
+        <i class='fas fa-umbrella-beach'></i></div>
+      <p>Beach</p>
+    </div>
+    <div class="filter">
+      <div><i class='fas fa-apple-alt'></i></div>
+      <p>Fruits</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-hotel"></i></div>
+      <p>Rooms</p>
+    </div>
+    <div class="filter">
+      <div>
+        <i class="fa-solid fa-water"></i></div>
+      <p>Lake Fronts</p>
+    </div>
+    <div class="filter">
+      <div><i class='fas fa-apple-alt'></i></div>
+      <p>Fruits</p>
+    </div> 
+    <!-- Toggle -->
+    <div class="tax-toggle">
+      <div class="form-check-reverse form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault"><i>Display total after taxes</i></label>
+      </div>
+    </div> 
+  </div>
+</div>
+    <div class="conatiner">
+      <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
+        <% for (let listing of allListings){%>
+
+        <a href="/listings/<%=listing._id%>" class="listing-link">
+          <div class="card col listing-card">
+            <img
+              class="card-img-top"
+              src="<%=listing.image.url%>"
+              alt="listing_image"
+              style="height: 20rem"
+            />
+            <div class="card-img-overlay" style="color: aliceblue">
+              <p>Dilshad</p>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                <b><%=listing.title%></b>
+                <br />
+                &#8377;<%=listing.price.toLocaleString("en-IN")%>/day
+               &nbsp;&nbsp;<i class="tax-info"> +18%GST</i>
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <%}%>
+      </div>
+    </div>
+</body>
+
+<script>
+  let taxSwitch= document.getElementById("flexSwitchCheckDefault");
+  taxSwitch.addEventListener("click",()=>{
+   let tax_info= document.getElementsByClassName("tax-info");
+   for(info of tax_info){
+    if(info.style.display !="inline"){
+      info.style.display="inline";
+    }
+    else{
+      info.style.display="none";
+    }
+   }
+  })
+</script>
